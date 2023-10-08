@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="add-user-modal" class="modal-wrapper">
+      <div class="modal">
+        <div class="modal-title">
+          <h3>Add User Modal</h3>
+          <button id="close-modal-btn">X</button>
+        </div>
+    <form class="form" id="form">
+        <input type="text" name="" id="name" placeholder="name" />
+        <input type="text" name="" id="age" placeholder="age" />
+        <select name="" id="gender">
+          <option value="famale">Female</option>
+          <option value="Male">Male</option>
+        </select>
+
+      <button type="submit" id="submit" class="btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+<header>
+<h1>User List</h1>
+  <button id="add-user-btn" class="btn">Add User</button>
+  <button type="button" id="sort-btn" class="btn">Sort</button>
+</header>
+
+      <div class="container" id="container"></div>
+   
+    <script src="index.js"></script>
+  </body>
+</html>
