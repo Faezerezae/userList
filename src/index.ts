@@ -29,6 +29,7 @@ addUserBtn.addEventListener("click", handleShowModal);
 closeModalBtn.addEventListener("click", handleHideModal);
 addUserModal.addEventListener("click", handleHideModal);
 
+
 const date = new Date().getTime();
 // مشخص کردن نوع داده ها
 type User = {
@@ -114,12 +115,14 @@ const deleteUser = (id: number) => {
 };
 
 const editUser = (user: User) => {
+  handleShowModal()
   nameInput.value = user.name;
   ageInput.value = user.age;
   genderSelect.value = user.gender;
   btnSubmit.innerText = "Edit";
   editMode = true;
   userEditId = user.id;
+  
 };
 
 sortBtn?.addEventListener("click", () => sortContact());

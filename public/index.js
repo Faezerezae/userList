@@ -94,6 +94,7 @@ const deleteUser = (id) => {
     renderUI(users);
 };
 const editUser = (user) => {
+    handleShowModal();
     nameInput.value = user.name;
     ageInput.value = user.age;
     genderSelect.value = user.gender;
