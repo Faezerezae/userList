@@ -1,6 +1,8 @@
 const addUserBtn = <HTMLButtonElement>document.getElementById("add-user-btn");
-const addUserModal =<HTMLDivElement>document.getElementById("add-user-modal");
-const closeModalBtn =<HTMLButtonElement>document.getElementById("close-modal-btn");
+const addUserModal = <HTMLDivElement>document.getElementById("add-user-modal");
+const closeModalBtn = <HTMLButtonElement>(
+  document.getElementById("close-modal-btn")
+);
 
 const form = <HTMLFormElement>document.getElementById("form");
 const container = <HTMLDivElement>document.getElementById("container");
@@ -19,7 +21,7 @@ const handleShowModal = () => {
   addUserModal.style.display = "flex";
 };
 
-const handleHideModal = (event:any) => {
+const handleHideModal = (event: any) => {
   if (event.target === closeModalBtn || event.target === addUserModal) {
     addUserModal.style.display = "none";
   }
@@ -28,7 +30,6 @@ const handleHideModal = (event:any) => {
 addUserBtn.addEventListener("click", handleShowModal);
 closeModalBtn.addEventListener("click", handleHideModal);
 addUserModal.addEventListener("click", handleHideModal);
-
 
 const date = new Date().getTime();
 // مشخص کردن نوع داده ها
@@ -68,11 +69,11 @@ const renderUI = (users: User[]): void => {
     divItem.append(nameSpan, ageSpan, genderSpan);
     const btnEdit = <HTMLButtonElement>document.createElement("button");
     btnEdit.innerText = "Edit";
-    btnEdit.classList.add("btn")
+    btnEdit.classList.add("btn");
     btnEdit.addEventListener("click", () => editUser(user));
     const btnDelete = <HTMLButtonElement>document.createElement("button");
     btnDelete.innerText = "Delete";
-    btnDelete.classList.add("btn")
+    btnDelete.classList.add("btn");
     btnDelete.addEventListener("click", () => deleteUser(user.id));
     divItem.append(btnDelete, btnEdit);
     container.append(divItem);
@@ -115,14 +116,13 @@ const deleteUser = (id: number) => {
 };
 
 const editUser = (user: User) => {
-  handleShowModal()
+  handleShowModal();
   nameInput.value = user.name;
   ageInput.value = user.age;
   genderSelect.value = user.gender;
   btnSubmit.innerText = "Edit";
   editMode = true;
   userEditId = user.id;
-  
 };
 
 sortBtn?.addEventListener("click", () => sortContact());

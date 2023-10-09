@@ -1,7 +1,7 @@
 "use strict";
 const addUserBtn = document.getElementById("add-user-btn");
 const addUserModal = document.getElementById("add-user-modal");
-const closeModalBtn = document.getElementById("close-modal-btn");
+const closeModalBtn = (document.getElementById("close-modal-btn"));
 const form = document.getElementById("form");
 const container = document.getElementById("container");
 const nameInput = document.getElementById("name");
