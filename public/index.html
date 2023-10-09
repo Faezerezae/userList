@@ -14,8 +14,14 @@
           <button id="close-modal-btn">X</button>
         </div>
         <form class="form" id="form">
-          <input type="text" name="" id="name" placeholder="name" />
-          <input type="text" name="" id="age" placeholder="age" />
+          <div class="input">
+            <input type="text" name="" id="name" placeholder="name" required />
+            <span class="validity"></span>
+          </div>
+          <div class="input">
+            <input type="text" name="" id="age" placeholder="age" required />
+            <span class="validity"></span>
+          </div>
           <select name="" id="gender">
             <option value="famale">Female</option>
             <option value="Male">Male</option>

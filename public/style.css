@@ -120,6 +120,27 @@ form input[type="text"]:focus {
   gap: 10px;
 }
 
+.input{
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+input + span {
+  padding-right: 30px;
+}
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+}
+input:valid + span::after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
+}
+
 .container {
   width: 50%;
   height: auto;
